@@ -40,14 +40,15 @@ BASE_URL=url_base_aquí
 
 ## 🛠️ Como ejecutar el proyecto
 
-# 1. Clona el repositorio
+### 1. Clona el repositorio
+   
 git clone https://github.com/johangv/pragma_test.git
 cd flutter-cat-app
 
-# 2. Instala dependencias
+### 2. Instala dependencias
 flutter pub get
 
-# 3. Crea tu archivo .env en la raiz del proyecto con tu clave de API y url base
+### 3. Crea tu archivo .env en la raiz del proyecto con tu clave de API y url base
 
 # 4. Ejecuta la app
 flutter run
