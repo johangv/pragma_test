@@ -5,9 +5,9 @@ Fue desarrollada como prueba técnica para Pragma.
 
 ## 📱 Capturas de pantalla
 
-![Pantalla principal](assets/images/screen1.png)
-![Búsqueda por raza](assets/images/screen2.png)
-![Detalles de una raza](assets/images/screen3.png)
+![Pantalla principal](assets/images/screen1.png){ width=300px }
+![Búsqueda por raza](assets/images/screen2.png){ width=300px }
+![Detalles de una raza](assets/images/screen3.png){ width=300px }
 
 ## 🚀 Características
 
