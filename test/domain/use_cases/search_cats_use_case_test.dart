@@ -1,0 +1,23 @@
+import 'package:flutter_test/flutter_test.dart';
+import 'package:pragma_test/domain/entities/cat_breed_entity.dart';
+import 'package:pragma_test/domain/use_cases/breedCat/search_cats_use_case.dart';
+
+import '../mocks/mock_cat_repository.dart';
+
+void main() {
+  late SearchCatsUseCase searchCatsUseCase;
+  late MockCatRepository mockCatRepository;
+
+  setUp(() {
+    mockCatRepository = MockCatRepository();
+    searchCatsUseCase = SearchCatsUseCase(mockCatRepository);
+  });
+
+  test('should return list of CatBreedEntity from repository', () async {
+    final result = await searchCatsUseCase("abys");
+
+    expect(result, isA<List<CatBreedEntity>>());
+    expect(result.length, 3);
+    expect(result.first.name, "Abyssinian");
+  });
+}
