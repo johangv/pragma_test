@@ -27,7 +27,9 @@ class Catbreedrepositoryimp extends CatBreedRepository {
       final List<dynamic> responseJson = jsonDecode(response);
 
       final List<CatBreedEntity> cats =
-          responseJson.map((cat) => CatBreedModel.fromJson(cat)).toList();
+          responseJson
+              .map((cat) => CatBreedModel.fromJson(cat).toEntity())
+              .toList();
 
       return cats;
     } catch (e) {
@@ -51,7 +53,9 @@ class Catbreedrepositoryimp extends CatBreedRepository {
       final List<dynamic> responseJson = jsonDecode(response);
 
       final List<CatBreedEntity> cats =
-          responseJson.map((cat) => CatBreedModel.fromJson(cat)).toList();
+          responseJson
+              .map((cat) => CatBreedModel.fromJson(cat).toEntity())
+              .toList();
 
       return cats;
     } catch (e) {
