@@ -39,7 +39,7 @@ class _SearcherWidgetState extends State<SearcherWidget> {
       decoration: InputDecoration(
         hintText: 'Search by breed name',
         suffixIcon:
-            !_searcherController.text.isNotEmpty
+            _searcherController.text.isEmpty
                 ? Icon(Icons.search)
                 : IconButton(
                   onPressed: () => _clearSearch(),

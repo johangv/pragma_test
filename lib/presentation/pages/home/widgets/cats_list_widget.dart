@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pragma_test/application/cubits/catBreed/cat_breed_cubit.dart';
-import 'package:pragma_test/application/cubits/catBreed/cat_breed_state.dart';
+import 'package:pragma_test/application/cubits/catBreed/states/cat_breed_cats_loaded_state.dart';
+import 'package:pragma_test/application/cubits/catBreed/states/cat_breed_error_state.dart';
+import 'package:pragma_test/application/cubits/catBreed/states/cat_breed_intial_state.dart';
+import 'package:pragma_test/application/cubits/catBreed/states/cat_breed_loading_state.dart';
+import 'package:pragma_test/application/cubits/catBreed/states/cat_breed_state.dart';
 import 'package:pragma_test/presentation/pages/home/widgets/cat_card_widget.dart';
 import 'package:pragma_test/presentation/pages/home/widgets/cats_error_widget.dart';
 import 'package:pragma_test/presentation/pages/home/widgets/cats_loading_widget.dart';

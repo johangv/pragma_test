@@ -1,14 +1,18 @@
 import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pragma_test/application/cubits/catBreed/cat_breed_state.dart';
+import 'package:pragma_test/application/cubits/catBreed/states/cat_breed_cats_loaded_state.dart';
+import 'package:pragma_test/application/cubits/catBreed/states/cat_breed_error_state.dart';
+import 'package:pragma_test/application/cubits/catBreed/states/cat_breed_intial_state.dart';
+import 'package:pragma_test/application/cubits/catBreed/states/cat_breed_loading_state.dart';
+import 'package:pragma_test/application/cubits/catBreed/states/cat_breed_state.dart';
 import 'package:pragma_test/domain/entities/cat_breed_entity.dart';
 import 'package:pragma_test/domain/use_cases/breedCat/get_cats_use_case.dart';
 import 'package:pragma_test/domain/use_cases/breedCat/search_cats_use_case.dart';
 
 class CatBreedCubit extends Cubit<CatBreedState> {
   CatBreedCubit(this._getCatsUseCase, this._searchCatsUseCase)
-    : super(CatBreedInitial());
+    : super(const CatBreedInitial());
 
   final GetCatsUseCase _getCatsUseCase;
   final SearchCatsUseCase _searchCatsUseCase;
@@ -19,7 +23,7 @@ class CatBreedCubit extends Cubit<CatBreedState> {
   Timer? _debounce;
 
   void getInitialCats() async {
-    emit(CatBreedLoading());
+    emit(const CatBreedLoading());
 
     _currentPage = 0;
 
